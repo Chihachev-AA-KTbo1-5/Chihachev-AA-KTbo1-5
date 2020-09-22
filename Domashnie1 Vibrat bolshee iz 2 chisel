@@ -1,0 +1,14 @@
+//DOMASHKA1 VVESTI 2 CHISLA & CHOOSE BOLSHEE IZ NIH
+#include <stdio.h>
+int main() {
+	int a, b;
+	scanf_s("%d %d", &a, &b);
+	printf("%d", a);
+	}
+	elif (a > b) {
+		se
+	{
+		printf("%d", b);
+	}
+	return 0;
+}	
