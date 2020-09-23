@@ -1,0 +1,19 @@
+//Chihachev KTbo1-5
+// ZADANIE 2 VVESTI CHISLO & PROVERIT CHETNOE ONO ILI NET
+#include <stdio.h>
+int main() {
+	int a;
+	scanf_s("%d", &a);
+	if (a % 2 == 0)
+	{
+		printf("1");
+	}
+	else
+	{
+		printf("0");
+	}
+	
+		
+		
+		return 0;
+}
