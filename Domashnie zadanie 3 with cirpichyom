@@ -1,3 +1,4 @@
+//Chihachev KTbo1-5
 // VVesti s klaviaturi 3 chisla(shirina i dlina kirpicha) & proverit, proydet li v otverstie (storoni korotie we zadadim samy)
 #include <stdio.h>
 int main()
