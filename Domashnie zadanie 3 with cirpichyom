@@ -1,0 +1,26 @@
+// VVesti s klaviaturi 3 chisla(shirina i dlina kirpicha) & proverit, proydet li v otverstie (storoni korotie we zadadim samy)
+#include <stdio.h>
+int main()
+{
+	int x;//ширина
+	int y;//длина
+	int z;//высота
+	printf("Vvedite scnachala chirinu dlinu i visotu kirpicha a potom razmeri otversiya");
+	scanf_s("%d %d %d", &x, &y, &z);
+
+	int u;// первая сторона отверстия
+	int v;// вторая отверстия
+	scanf_s("%d %d", &u, &v);
+	if ((x < u && y < v) || (x < v && y < u) || (x < u && z < v) || (x < v && z < u) || (y < v && z < u) || (z < u && y < v))
+	{
+		printf("Include in Box"); // если кирпич входит в отверстие
+	}
+	else
+	{
+		printf("Don't Include"); // если кирпич не входит в отверстие
+	}
+
+
+
+return 0;
+}
