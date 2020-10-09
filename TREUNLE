@@ -4,11 +4,11 @@ int main()
 {
 
 	int a, b, c;
-	printf("Vvedite storoni treunle");
+	printf("Vvedite storoni treunle\n");
 	scanf_s("%d %d %d", &a, &b, &c);
 	if ((a + b > c) || (a + c > b) || (b + c > a))
 	{
-		printf("treungle is be");
+		printf("treungle is be\n");
 		if ((a == b)&(b != c))
 		{
 			printf("treungle ravnibedriny");
