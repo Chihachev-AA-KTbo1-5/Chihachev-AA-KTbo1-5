@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+int main(int argC,char*argV[])
+{
+	char str[] = "I have 25 students";
+	int k=0, s = 0;
+	while (str[k] != '\0')
+	{
+		if ((str[k] >= 'a'&&str[k <= 'z']) || (str[k] <= 'Z'&&str[k] >= 'A'))s++;
+		k++;
+
+	}
+	printf("%d", s);
+
+	return 0;
+}
