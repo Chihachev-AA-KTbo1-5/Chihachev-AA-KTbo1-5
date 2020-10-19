@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include <cstdlib>
+#define F10
+int main()
+{
+	int A[10];
+	int i;
+	for (i = 0; i < 10; i++)
+	{
+		A[i] = rand() % 100;
+		printf("%d ", A[i]);
+	}
+
+	
+
+
+	int max = A[0];
+	int min = A[0];
+	for (int i = 1; i < 10; i++)
+	{
+		if (max < A[i]) max = A[i]; //esli znachenie elementa bolshe max, zapisivaem it's znachenie in peremennuyu max
+		if (min > A[i]) min = A[i]; ////esli znachenie elementa menshe min, zapisivaem it's znachenie in peremennuyu min
+	}
+	printf("\nmin = %d \n", min);
+	printf("max = %d \n", max);
+
+
+
+	return 0;
+}
