@@ -1,17 +1,21 @@
 #include<stdio.h>
 #include <cstdlib>
+#include<time.h>
 #define F10
 int main()
 {
 	int A[10];
 	int i;
+	srand(time(NULL));
 	for (i = 0; i < 10; i++)
+
+	
 	{
 		A[i] = rand() % 100;
 		printf("%d ", A[i]);
 	}
 
-	
+
 
 
 	int max = A[0];
@@ -19,12 +23,21 @@ int main()
 	for (int i = 1; i < 10; i++)
 	{
 		if (max < A[i]) max = A[i]; //esli znachenie elementa bolshe max, zapisivaem it's znachenie in peremennuyu max
-		if (min > A[i]) min = A[i]; ////esli znachenie elementa menshe min, zapisivaem it's znachenie in peremennuyu min
+		if (min > A[i]) min = A[i]; //esli znachenie elementa menshe min, zapisivaem it's znachenie in peremennuyu min
 	}
+	float sum, sred;
+	sum = A[0] + A[1] + A[2] + A[3] + A[4] + A[5] + A[6] + A[7] + A[8] + A[9]; //summa vseh elementov
+	
+	
+	
+	sred = sum / 10; //srednee znachenie
+	
+		
+	
+	
 	printf("\nmin = %d \n", min);
 	printf("max = %d \n", max);
-
-
-
-	return 0;
+	printf("average = %f", sred); 
+	
+		return 0;
 }
