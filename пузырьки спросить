@@ -1,0 +1,41 @@
+#include<stdio.h>
+#include <cstdlib>
+
+int main()
+{
+	int* A;
+	int N=0;
+	printf("Vvedite dlinu massiva");
+	scanf("%d",&N);
+	A = new int[N];
+	int i;
+	for (i = 0; i < N; i++)
+	{
+		A[i] = rand() % 100;
+		printf("%d ", A[i]);
+	}
+	for (int i = 0; i < N; i++)
+	{
+		for (int j = 0; j < N;j++)
+		{
+			if (A[j] > A[j + 1]) {
+				int b = A[j]; // создали дополнительную переменную
+				A[j] = A[j + 1]; // меняем местами
+				A[j + 1] = b; // значения элементов
+			}
+		}
+	}
+	printf("\n");
+	for (i = 0; i < N;i++)
+	{
+		
+		printf("%d ", A[i]);
+	}
+
+
+
+
+
+
+	return 0;
+}
