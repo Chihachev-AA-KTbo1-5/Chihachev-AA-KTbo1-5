@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include <cstdlib>
+#include<time.h>
 
 int main()
 {
@@ -14,6 +15,7 @@ int main()
   }
 	A = new int[N];
 	int i;
+	srand(time(NULL));
 	for (i = 0; i < N; i++)
 	{
 		A[i] = rand() % 100;
