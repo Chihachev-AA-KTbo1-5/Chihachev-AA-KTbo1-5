@@ -7,6 +7,11 @@ int main()
 	int N=0;
 	printf("Vvedite dlinu massiva");
 	scanf("%d",&N);
+  if(N<=0)
+  {
+    printf("Vvedite bolshe 0");
+    exit(0);
+  }
 	A = new int[N];
 	int i;
 	for (i = 0; i < N; i++)
