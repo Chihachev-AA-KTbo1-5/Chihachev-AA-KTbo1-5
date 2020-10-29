@@ -1,0 +1,43 @@
+#include<stdio.h>
+#include<math.h>
+#include <time.h>
+#include<stdlib.h>
+
+int main()
+{
+	
+	int A[10], j, k;
+	
+	printf("given an array\n");
+	srand(time(NULL));
+	for (int i = 0; i < 10;i++) 
+	{
+
+
+		A[i] = rand()%100;
+		printf("%d ",A[i]);
+
+
+	}
+
+
+
+	printf("\ninsert the number ");
+	scanf_s("%d", &j);
+	int  l = 10000000000000000;
+	for (int i = 0; i < 10; i++) 
+	{
+		if (abs(j-A[i]) < l)
+
+		{
+			k = i;
+			l = abs(j - A[i]);
+
+		}
+		
+	}
+	printf("\nnearest index number: %d\n",k);
+
+
+	return 0;
+}
