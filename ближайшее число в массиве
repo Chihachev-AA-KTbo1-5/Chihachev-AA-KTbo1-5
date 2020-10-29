@@ -1,3 +1,6 @@
+//KRbo1-5 Chihachev Artyom 
+
+
 #include<stdio.h>
 #include<math.h>
 #include <time.h>
@@ -8,11 +11,11 @@ int main()
 	
 	int A[10], j, k;
 	
-	printf("given an array\n");
+	printf("given an array\n"); // prosto vivod usloviya dlya krasoti
 	srand(time(NULL));
-	for (int i = 0; i < 10;i++) 
+	for (int i = 0; i < 10;i++)  
 	{
-
+		                        //zadaem massive cherez radnom
 
 		A[i] = rand()%100;
 		printf("%d ",A[i]);
@@ -24,10 +27,10 @@ int main()
 
 	printf("\ninsert the number ");
 	scanf_s("%d", &j);
-	int  l = 10000000000000000;
+	int  l = j+1;     //peremennaya dlya sravneniya raznosty mejdu chislom & elementom mass, beryom na 1 bosle j, chtobi ne bilo ogranicheniy na j
 	for (int i = 0; i < 10; i++) 
 	{
-		if (abs(j-A[i]) < l)
+		if (abs(j-A[i]) < l)       // vichitaem raznost po modulu y sravnivaem snachala s samim bolshim chislom, a potom s predidushey raznostyu
 
 		{
 			k = i;
