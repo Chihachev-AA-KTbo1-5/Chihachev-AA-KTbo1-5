@@ -1,0 +1,58 @@
+#include <stdio.h>
+#include <time.h>
+#include<stdlib.h>
+
+int main() {
+
+	int N, i;
+	printf("Enter the length of the array\n");
+	scanf_s("%d", &N);
+	double* A = new double[N];
+
+
+	srand(time(NULL));
+	for (int i = 0; i < N; i++)
+	{
+
+
+		A[i] = (rand() % 12400+5000);
+		A[i] = A[i] / 100;
+		printf("%f ", A[i]);
+	}
+	for (int i = 0; i < N; i++) {
+		for (int j = 0; j < N-1; j++) {
+			if (A[j] > A[j + 1]) {
+				int b = A[j]; // создали дополнительную переменную
+				A[j] = A[j + 1]; // меняем местами
+				A[j + 1] = b; // значения элементов
+			}
+		}
+	}
+	printf("\n");
+	for (i = 0; i < N; i++)
+	{
+
+		printf("%.2f ", A[i]);
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	return 0;
+}
