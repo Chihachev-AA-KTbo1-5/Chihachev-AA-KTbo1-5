@@ -34,11 +34,26 @@ int main() {
 
 		printf("%.2f ", A[i]);
 	}
+	FILE* fp;
+	char name[] = "MyFile.txt";
+	
+	
+	
+	
+	
+	printf("\n");
+	
+	
+	
+	fp = fopen("MyFile.txt", "w");
+	for (i = 0; i < N; i++)
+	{
+
+		fprintf(fp,"%.2f ", "%s", A[i]);
+	}
 
 
-
-
-
+	fclose(fp);
 
 
 
