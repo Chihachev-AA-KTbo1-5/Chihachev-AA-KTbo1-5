@@ -1,0 +1,28 @@
+
+#include "iostream"
+#include "math.h"
+#include "cstdlib"
+
+
+using namespace std;
+
+
+
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+    double a, b;
+    double N;
+    cout << "Из какого числа найти квадратный корень? ";
+    cin >> N; //число из которого находим 
+    a = 0;
+    b = (1 + N)/2; // начальное приближение
+
+    while (abs(a - b) > 0.0001) //    точность значения
+        a = b,
+        b = 0.5 * (b + N / b); //  формула Герона
+    
+    cout << "Квадратный корень из числа "<< N <<" = " << b;
+     
+    return 0;
+}
