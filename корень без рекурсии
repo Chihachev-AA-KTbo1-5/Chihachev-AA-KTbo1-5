@@ -1,4 +1,5 @@
 
+
 #include "iostream"
 #include "math.h"
 #include "cstdlib"
@@ -6,6 +7,14 @@
 
 using namespace std;
 
+double bb(double t, int c)
+{
+    if (c == 0)
+        return 0.5 * (1 + t);
+
+    double n = bb(t, c - 1);
+    return 0.5 * (n + t / n);
+}
 
 
 int main()
@@ -13,8 +22,12 @@ int main()
     setlocale(LC_ALL, "Russian");
     double a, b;
     double N;
+    double n;
+
+    
     cout << "Из какого числа найти квадратный корень? ";
     cin >> N; //число из которого находим 
+    n = N;
     a = 0;
     b = (1 + N)/2; // начальное приближение
 
@@ -22,7 +35,9 @@ int main()
         a = b,
         b = 0.5 * (b + N / b); //  формула Герона
     
-    cout << "Квадратный корень из числа "<< N <<" = " << b;
-     
+    cout << "Квадратный корень из числа "<< N <<" = " << b << endl;
+    
+    cout << "корень с помощью рекурсии = " <<bb(n, 10) << endl;
     return 0;
 }
+
