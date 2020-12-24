@@ -1,0 +1,16 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+int main()
+{
+int a,b;
+cin>>a>>b;
+int x;
+x=a/b;
+int y=b*x+b;
+int z;
+z=y-a;
+cout<<z;
+ return 0;
+}
