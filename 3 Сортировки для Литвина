@@ -60,6 +60,28 @@ void quickSort(int *numbers, int left, int right)
    
 }
 //////////////////////////////////////////////
+void flajok(int A[],int N){
+  
+for (int i = 0; i < N; i++) {
+bool flag = true;
+for (int j = 0; j < N - (i + 1); j++) {
+if (A[j] > A[j + 1]) {
+flag = false;
+swap (A[j], A[j + 1]);
+}
+}
+if (flag) {
+break;
+}
+}
+cout<<endl<<"Сортировка флажком: "<<endl;
+for (int i = 0; i < N; i++)
+	{
+		
+		printf("%d ", A[i]);
+	}
+}
+//////////////////////////////////////////////
 int main()
 {
   setlocale(LC_ALL, "Russian");
@@ -86,7 +108,8 @@ int main()
 		
 		printf("%d ", A[i]);
 	}        // Вывод элементов массива после сортировки
- 
+  flajok(A,N);
+
 
 	return 0;
 }
