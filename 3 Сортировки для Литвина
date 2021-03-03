@@ -1,0 +1,92 @@
+#include<stdio.h>
+#include <cstdlib>
+#include<time.h>
+#include <ctime>
+#include <iostream>
+using namespace std;
+
+void puzr(int A[],int N)
+ {
+   setlocale(LC_ALL, "Russian");
+   cout<<endl<<"Сортировка пузырьком: "<<endl;
+for (int i = 0; i < N; i++) {
+		for (int j = 0; j < N-1; j++) {
+			if (A[j] > A[j + 1]) {
+				int b = A[j]; // создали дополнительную переменную
+				A[j] = A[j + 1]; // меняем местами
+				A[j + 1] = b; // значения элементов
+			}
+		}
+	}
+	for (int i = 0; i < N; i++)
+	{
+		
+		printf("%d ", A[i]);
+	}
+ }
+//////////////////////////////////////////////
+void quickSort(int *numbers, int left, int right)
+{
+  int pivot; // разрешающий элемент
+  int l_hold = left; //левая граница
+  int r_hold = right; // правая граница
+  pivot = numbers[left];
+  while (left < right) // пока границы не сомкнутся
+  {
+    while ((numbers[right] >= pivot) && (left < right))
+      right--; // сдвигаем правую границу пока элемент [right] больше [pivot]
+    if (left != right) // если границы не сомкнулись
+    {
+      numbers[left] = numbers[right]; // перемещаем элемент [right] на место разрешающего
+      left++; // сдвигаем левую границу вправо
+    }
+    while ((numbers[left] <= pivot) && (left < right))
+      left++; // сдвигаем левую границу пока элемент [left] меньше [pivot]
+    if (left != right) // если границы не сомкнулись
+    {
+      numbers[right] = numbers[left]; // перемещаем элемент [left] на место [right]
+      right--; // сдвигаем правую границу вправо
+    }
+  }
+  numbers[left] = pivot; // ставим разрешающий элемент на место
+  pivot = left;
+  left = l_hold;
+  right = r_hold;
+  if (left < pivot) // Рекурсивно вызываем сортировку для левой и правой части массива
+    quickSort(numbers, left, pivot - 1);
+  if (right > pivot)
+    quickSort(numbers, pivot + 1, right);
+  
+   
+}
+//////////////////////////////////////////////
+int main()
+{
+  setlocale(LC_ALL, "Russian");
+ int N;
+ cin >>N; 
+ int A[N];
+	int i;
+  printf("\n");
+  cout<<"Исходный массив: ";
+  printf("\n");
+  srand(time(NULL))
+;	for (i = 0; i <N; i++)
+	{
+		A[i]=rand() % 100;
+		printf("%d ", A[i]);
+	
+
+	}
+  puzr (A,N);
+  quickSort(A, 0, N-1); // вызов функции сортировки
+    	cout<<endl<<"Быстрая сортировка: "<<endl;
+      for (int i = 0; i < N; i++)
+	{
+		
+		printf("%d ", A[i]);
+	}        // Вывод элементов массива после сортировки
+ 
+
+	return 0;
+}
